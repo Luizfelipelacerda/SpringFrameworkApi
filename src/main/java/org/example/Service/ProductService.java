@@ -41,4 +41,13 @@ public class ProductService {
         }
         return byId.get();
     }
+
+    public void deleteProduct(Long productId) {
+        Optional<Product> byId = this.productRepository.findById(productId);
+        if(!byId.isPresent()){
+            throw new RuntimeException("Producto de Id "+productId+" não encontrado");
+        }
+        this.productRepository.delete(byId.get());
+
+    }
 }

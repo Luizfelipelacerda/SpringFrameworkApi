@@ -39,6 +39,13 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
 
+    @DeleteMapping("deleteProduct")
+    public ResponseEntity deleteProduct(@RequestParam Long productId){
+        this.productService.deleteProduct(productId);
+        return ResponseEntity.ok().build();
+    }
+
+
     @GetMapping()
     public String isOkay(){
         return "kkk";
