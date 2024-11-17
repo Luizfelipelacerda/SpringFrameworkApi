@@ -33,6 +33,12 @@ public class ProductController {
         return ResponseEntity.ok(productSalvo);
     }
 
+    @PostMapping("findProductById")
+    public ResponseEntity<Product> findById(@RequestParam Long productId){
+        Product product = this.productService.getProductById(productId);
+        return ResponseEntity.ok(product);
+    }
+
     @GetMapping()
     public String isOkay(){
         return "kkk";
