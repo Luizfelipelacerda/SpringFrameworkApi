@@ -38,17 +38,16 @@
       <version>5.3.30</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
-<!--    <dependency>-->
-<!--      <groupId>org.springframework.data</groupId>-->
-<!--      <artifactId>spring-data-jpa</artifactId>-->
-<!--      <version>3.3.5</version>-->
-<!--    </dependency>-->
-
-<!--    <dependency>-->
-<!--      <groupId>org.hibernate</groupId>-->
-<!--      <artifactId>hibernate-core</artifactId>-->
-<!--      <version>5.6.15.Final</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>2.4.8</version> <!-- Compatível com Spring Framework 5.3.x -->
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.4.32.Final</version>
+    </dependency>
 
     <!-- Driver do banco de dados -->
     <dependency>
@@ -95,13 +94,17 @@
       <scope>provided</scope>
     </dependency>
     <!-- https://mvnrepository.com/artifact/com.zaxxer/HikariCP -->
-<!--    <dependency>-->
-<!--      <groupId>com.zaxxer</groupId>-->
-<!--      <artifactId>HikariCP</artifactId>-->
-<!--      <version>5.0.0</version>-->
-<!--    </dependency>-->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>5.0.0</version>
+    </dependency>
 
-
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.15.2</version>
+    </dependency>
   </dependencies>
 
   <build>

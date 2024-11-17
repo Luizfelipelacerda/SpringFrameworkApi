@@ -12,6 +12,7 @@
     <mvc:annotation-driven/>
     <!-- Ativa o component scan para detectar @Controller, @Service, etc. -->
     <context:component-scan base-package="org.example.Controller"/>
+    <context:component-scan base-package="org.example" />
 
     <!-- Configuração básica do Spring MVC -->
     <mvc:annotation-driven/>
