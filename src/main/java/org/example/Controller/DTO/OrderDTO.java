@@ -12,11 +12,11 @@ public class OrderDTO {
     public OrderDTO() {
     }
 
-//    public OrderDTO(String name, Date dataDeEnvio, String sender) {
-//        this.name = name;
-//        this.dataDeEnvio = dataDeEnvio;
-//        this.sender = sender;
-//    }
+    public OrderDTO(String name, Date dataDeEnvio, String sender) {
+        this.name = name;
+        this.dataDeEnvio = dataDeEnvio;
+        this.sender = sender;
+    }
 
     public String getName() {
         return name;
@@ -42,7 +42,7 @@ public class OrderDTO {
         this.sender = sender;
     }
 
-//    public Order DtoToOrderMap(){
-//        return new Order(this.getName(),this.getDataDeEnvio(),this.getSender());
-//    }
+    public Order DtoToOrderMap(){
+        return new Order(this.getName(),this.getDataDeEnvio(),this.getSender());
+    }
 }

@@ -14,12 +14,12 @@ import java.util.List;
 public class OrderController {
 
 
-//    @Autowired
-//    private final OrderService orderService;
+    @Autowired
+    private final OrderService orderService;
 
-//    public OrderController(OrderService orderService) {
-//        this.orderService = orderService;
-//    }
+    public OrderController(OrderService orderService) {
+        this.orderService = orderService;
+    }
 
     @GetMapping("isOkay")
     public String isOkay(){
@@ -31,16 +31,16 @@ public class OrderController {
         return "Projeto feito em Spring Framework";
     }
 
-//    @GetMapping("getOrders")
-//    public ResponseEntity<List<Order>> getOrders(){
-//
-//        List<Order> allOrders = this.orderService.getAllOrders();
-//        return ResponseEntity.ok(allOrders);
-//    }
-//
-//    @PostMapping("CreateNewOrder")
-//    public ResponseEntity<Order> createNewOrder(@RequestBody OrderDTO orderDTO){
-//        Order newOrder = this.orderService.createNewOrder(orderDTO);
-//        return ResponseEntity.ok(newOrder);
-//    }
+    @GetMapping("getOrders")
+    public ResponseEntity<List<Order>> getOrders(){
+
+        List<Order> allOrders = this.orderService.getAllOrders();
+        return ResponseEntity.ok(allOrders);
+    }
+
+    @PostMapping("CreateNewOrder")
+    public ResponseEntity<Order> createNewOrder(@RequestBody OrderDTO orderDTO){
+        Order newOrder = this.orderService.createNewOrder(orderDTO);
+        return ResponseEntity.ok(newOrder);
+    }
 }

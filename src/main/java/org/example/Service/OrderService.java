@@ -13,27 +13,27 @@ import java.util.List;
 @Service
 public class OrderService {
 
-//    @Autowired
-//    private final OrderRepository orderRepository;
-//
-//
-//    public OrderService(OrderRepository orderRepository) {
-//        this.orderRepository = orderRepository;
-//    }
-//
-//    public Order createNewOrder(OrderDTO orderDTO){
-//        if(orderDTO == null){
-//            throw new ResponseStatusException(HttpStatus.NO_CONTENT);
-//        }
-//
-//        Order savedOrder = this.orderRepository.save(orderDTO.DtoToOrderMap());
-//
-//        return savedOrder;
-//
-//    }
-//
-//
-//    public List<Order> getAllOrders() {
-//        return this.orderRepository.findAll();
-//    }
+    @Autowired
+    private final OrderRepository orderRepository;
+
+
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
+
+    public Order createNewOrder(OrderDTO orderDTO){
+        if(orderDTO == null){
+            throw new ResponseStatusException(HttpStatus.NO_CONTENT);
+        }
+
+        Order savedOrder = this.orderRepository.save(orderDTO.DtoToOrderMap());
+
+        return savedOrder;
+
+    }
+
+
+    public List<Order> getAllOrders() {
+        return this.orderRepository.findAll();
+    }
 }

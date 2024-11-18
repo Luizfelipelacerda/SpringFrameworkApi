@@ -28,7 +28,7 @@ public class AppInitializer implements WebApplicationInitializer {
     public void onStartup(javax.servlet.ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
         context.setConfigLocation("org.example.Config"); // Altere para o pacote correto onde está a configuração
-        context.scan("org.example.Controller", "org.example.Service"); // Inclua os pacotes onde os beans estão localizados
+        context.scan("org.example.Controller", "org.example.Service", "org.example.Repository"); // Inclua os pacotes onde os beans estão localizados
 
         ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher", new DispatcherServlet(context));
         dispatcher.setLoadOnStartup(1);
