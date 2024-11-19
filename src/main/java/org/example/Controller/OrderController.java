@@ -17,14 +17,12 @@ public class OrderController {
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
+
     @GetMapping("isOkay")
     public String isOkay(){
         return "Projeto feito em Spring Framework";
     }
-    @GetMapping()
-    public String isOkay2(){
-        return "Projeto feito em Spring Framework";
-    }
+
     @GetMapping("getOrders")
     public ResponseEntity<List<Order>> getOrders(){
 
@@ -33,8 +31,8 @@ public class OrderController {
     }
 
     @PostMapping("CreateNewOrder")
-    public ResponseEntity<Order> createNewOrder(@RequestBody OrderDTO orderDTO){
-        Order newOrder = this.orderService.createNewOrder(orderDTO);
+    public ResponseEntity<OrderDTO> createNewOrder(@RequestBody OrderDTO orderDTO){
+        OrderDTO newOrder = this.orderService.createNewOrder(orderDTO);
         return ResponseEntity.ok(newOrder);
     }
 }

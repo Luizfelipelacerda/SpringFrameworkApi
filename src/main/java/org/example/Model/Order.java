@@ -53,4 +53,14 @@ public class Order {
     public void setSender(String sender) {
         this.sender = sender;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", nameOrder='" + nameOrder + '\'' +
+                ", dataDeEnvio=" + dataDeEnvio +
+                ", sender='" + sender + '\'' +
+                '}';
+    }
 }
